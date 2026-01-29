@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hairfall Solution | Healthy Hair Program</title>
+
+    <!-- FAVICON (JPEG ICON) -->
+    <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7f6;
+        }
+
+        header {
+            background: linear-gradient(rgba(30,130,90,0.7), rgba(30,130,90,0.7)),
+                        url('header-bg.jpeg') center/cover no-repeat;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .problems {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .problem-box {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .problem-box:hover {
+            transform: translateY(-5px);
+            background: #e9f5f0;
+        }
+
+        .problem-box h3 {
+            margin-top: 0;
+            color: #1e825a;
+        }
+
+        .problem-box p {
+            display: none;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .problem-box.active p {
+            display: block;
+        }
+
+        footer {
+            background: #1e825a;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hairfall Solution Program</h1>
+    <p>Root cause samjho, tabhi permanent solution milega 🌿</p>
+</header>
+
+<div class="container">
+    <h2>Common Hair Problems (Click to Know More)</h2>
+
+    <div class="problems">
+
+        <div class="problem-box" onclick="toggle(this)">
+            <h3>Heavy Hairfall</h3>
+            <p>Stress, poor diet, hormonal imbalance aur weak roots heavy hairfall ka main reason hote hain.</p>
+        </div>
+
+        <div class="problem-box" onclick="toggle(this)">
+            <h3>Dandruff</h3>
+            <p>Dry scalp, fungal infection aur galat hair products dandruff ko badhate hain.</p>
+        </div>
+
+        <div class="problem-box" onclick="toggle(this)">
+            <h3>Thin Hair</h3>
+            <p>Protein deficiency aur over styling se baal patle aur weak ho jate hain.</p>
+        </div>
+
+        <div class="problem-box" onclick="toggle(this)">
+            <h3>Genetic Hairfall</h3>
+            <p>Family history ke wajah se hair follicles dheere dheere weak ho jate hain.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Hairfall Solution | All Rights Reserved
+</footer>
+
+<script>
+    function toggle(box) {
+        box.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
