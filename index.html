@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Hairfall Solutions</title>
 
@@ -11,104 +10,68 @@
 <style>
 
 body{
-margin:0;
 font-family:Arial;
-background:#f4f4f4;
+margin:0;
+background:#f2f2f2;
 }
-
-/* HEADER */
 
 header{
-background:linear-gradient(rgba(0,120,70,0.7),rgba(0,120,70,0.7)),url('header-bg.jpeg');
+background:url("header-bg.jpeg");
 background-size:cover;
 color:white;
-padding:40px;
 text-align:center;
+padding:60px;
 }
-
-header h1{
-margin:0;
-font-size:32px;
-}
-
-/* NAVIGATION */
 
 nav{
-margin-top:20px;
+background:#007846;
+padding:15px;
+text-align:center;
 }
 
 nav a{
 color:white;
-margin:0 15px;
-font-weight:bold;
+margin:15px;
 text-decoration:none;
+font-weight:bold;
 }
-
-nav a:hover{
-text-decoration:underline;
-}
-
-/* MAIN SECTION */
 
 .container{
 padding:30px;
 }
 
-.problems{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
 .box{
 background:white;
 padding:20px;
+margin:15px;
 border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-cursor:pointer;
 }
 
-.box:hover{
-background:#eaf7f1;
-}
-
-.box p{
-display:none;
-margin-top:10px;
-font-size:14px;
-}
-
-.box.active p{
-display:block;
-}
-
-/* FOOTER */
-
-footer{
+button{
 background:#007846;
 color:white;
-text-align:center;
-padding:15px;
-margin-top:30px;
+padding:10px 20px;
+border:none;
+border-radius:5px;
 }
 
-/* WHATSAPP BUTTON */
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
 
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
 color:white;
+padding:15px;
+border-radius:50%;
 text-decoration:none;
-box-shadow:0 3px 8px rgba(0,0,0,0.3);
+font-size:20px;
 }
 
 </style>
@@ -120,62 +83,139 @@ box-shadow:0 3px 8px rgba(0,0,0,0.3);
 <header>
 
 <h1>Hairfall Solutions</h1>
-<p>Understand the root cause of hairfall and get the right solution</p>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Hair Test</a>
-<a href="#">Solutions</a>
-<a href="#">Contact</a>
-</nav>
+<p>Natural solutions for hairfall, dandruff and thin hair</p>
 
 </header>
 
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#hair-test">Hair Test</a>
+
+<a href="#products">Solutions</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
 <div class="container">
 
-<h2>Common Hair Problems</h2>
+<div class="box">
 
-<div class="problems">
+<h2>Hair Problems</h2>
 
-<div class="box" onclick="toggle(this)">
-<h3>Heavy Hairfall</h3>
-<p>Hairfall can happen due to stress, hormonal imbalance, poor diet and weak hair roots.</p>
-</div>
+<p>Heavy Hairfall</p>
 
-<div class="box" onclick="toggle(this)">
-<h3>Dandruff</h3>
-<p>Dandruff is usually caused by dry scalp, fungal infection or wrong hair products.</p>
-</div>
+<p>Dandruff Problem</p>
 
-<div class="box" onclick="toggle(this)">
-<h3>Thin Hair</h3>
-<p>Thin hair can result from protein deficiency, excessive styling and poor nutrition.</p>
-</div>
+<p>Thin Hair</p>
 
-<div class="box" onclick="toggle(this)">
-<h3>Genetic Hairfall</h3>
-<p>Genetic hairfall happens due to family history and gradual weakening of hair follicles.</p>
-</div>
+<p>Genetic Hairfall</p>
 
 </div>
 
 </div>
 
-<footer>
+<div class="container">
 
-<p>© 2026 Hairfall Solutions | All Rights Reserved</p>
+<h2 id="hair-test">Free Hair Test</h2>
+
+<div class="box">
+
+<form>
+
+<input type="text" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
+
+<input type="number" placeholder="Your Age" required style="width:100%;padding:10px;margin:10px 0;">
+
+<select style="width:100%;padding:10px;margin:10px 0;">
+
+<option>Hairfall Level</option>
+
+<option>Low</option>
+
+<option>Medium</option>
+
+<option>High</option>
+
+</select>
+
+<select style="width:100%;padding:10px;margin:10px 0;">
+
+<option>Dandruff</option>
+
+<option>No</option>
+
+<option>Little</option>
+
+<option>Severe</option>
+
+</select>
+
+<select style="width:100%;padding:10px;margin:10px 0;">
+
+<option>Stress Level</option>
+
+<option>Low</option>
+
+<option>Medium</option>
+
+<option>High</option>
+
+</select>
+
+<button type="submit">Submit Hair Test</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="container" id="products">
+
+<h2>Recommended Products</h2>
+
+<div class="box">
+
+<h3>Hair Growth Oil</h3>
+
+<p>Helps reduce hairfall and strengthen roots.</p>
+
+</div>
+
+<div class="box">
+
+<h3>Anti Dandruff Shampoo</h3>
+
+<p>Removes dandruff and cleans scalp.</p>
+
+</div>
+
+<div class="box">
+
+<h3>Biotin Supplement</h3>
+
+<p>Improves hair thickness and hair strength.</p>
+
+</div>
+
+</div>
+
+<footer id="contact">
+
+<h3>Contact Us</h3>
+
+<p>WhatsApp: 9584288420</p>
+
+<p>Hairfall Solutions</p>
 
 </footer>
 
-<a href="https://wa.me/9584288420" class="whatsapp" target="_blank">💬</a>
-
-<script>
-
-function toggle(element){
-element.classList.toggle("active");
-}
-
-</script>
+<a class="whatsapp" href="https://wa.me/919584288420">W</a>
 
 </body>
+
 </html>
