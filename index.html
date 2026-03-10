@@ -53,6 +53,7 @@ color:white;
 padding:12px 20px;
 border:none;
 border-radius:5px;
+cursor:pointer;
 }
 
 footer{
@@ -71,10 +72,28 @@ color:white;
 padding:15px;
 border-radius:50%;
 text-decoration:none;
-font-size:20px;
+font-size:18px;
 }
 
 </style>
+
+<script>
+
+function sendToWhatsApp(){
+
+var name=document.getElementById("name").value;
+var age=document.getElementById("age").value;
+var hairfall=document.getElementById("hairfall").value;
+var dandruff=document.getElementById("dandruff").value;
+var stress=document.getElementById("stress").value;
+
+var message="Hair Test Result:%0AName: "+name+"%0AAge: "+age+"%0AHairfall: "+hairfall+"%0ADandruff: "+dandruff+"%0AStress: "+stress;
+
+window.open("https://wa.me/919584288420?text="+message,"_blank");
+
+}
+
+</script>
 
 </head>
 
@@ -107,11 +126,8 @@ font-size:20px;
 <h2>Hair Problems</h2>
 
 <p>Heavy Hairfall</p>
-
 <p>Dandruff Problem</p>
-
 <p>Thin Hair</p>
-
 <p>Genetic Hairfall</p>
 
 </div>
@@ -126,38 +142,34 @@ font-size:20px;
 
 <form action="https://formsubmit.co/hairsolutionsgrowth@gmail.com" method="POST">
 
-<input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
+<input type="hidden" name="_captcha" value="false">
 
-<input type="number" name="age" placeholder="Your Age" required style="width:100%;padding:10px;margin:10px 0;">
+<input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
 
-<select name="hairfall" style="width:100%;padding:10px;margin:10px 0;">
+<input type="number" id="age" name="age" placeholder="Your Age" required style="width:100%;padding:10px;margin:10px 0;">
 
-<option>Hairfall Level</option>
+<select id="hairfall" name="hairfall" required style="width:100%;padding:10px;margin:10px 0;">
+<option value="">Hairfall Level</option>
 <option>Low</option>
 <option>Medium</option>
 <option>High</option>
-
 </select>
 
-<select name="dandruff" style="width:100%;padding:10px;margin:10px 0;">
-
-<option>Dandruff</option>
+<select id="dandruff" name="dandruff" required style="width:100%;padding:10px;margin:10px 0;">
+<option value="">Dandruff</option>
 <option>No</option>
 <option>Little</option>
 <option>Severe</option>
-
 </select>
 
-<select name="stress" style="width:100%;padding:10px;margin:10px 0;">
-
-<option>Stress Level</option>
+<select id="stress" name="stress" required style="width:100%;padding:10px;margin:10px 0;">
+<option value="">Stress Level</option>
 <option>Low</option>
 <option>Medium</option>
 <option>High</option>
-
 </select>
 
-<button type="submit">Submit Hair Test</button>
+<button type="submit" onclick="sendToWhatsApp()">Submit Hair Test</button>
 
 </form>
 
@@ -170,24 +182,18 @@ font-size:20px;
 <h2>Recommended Products</h2>
 
 <div class="box">
-
 <h3>Hair Growth Oil</h3>
 <p>Helps reduce hairfall and strengthen roots.</p>
-
 </div>
 
 <div class="box">
-
 <h3>Anti Dandruff Shampoo</h3>
 <p>Removes dandruff and cleans scalp.</p>
-
 </div>
 
 <div class="box">
-
 <h3>Biotin Supplement</h3>
 <p>Improves hair thickness and hair strength.</p>
-
 </div>
 
 </div>
@@ -198,11 +204,11 @@ font-size:20px;
 
 <p>WhatsApp: 9584288420</p>
 
-<p>Hairfall Solutions</p>
+<p>Email: hairsolutionsgrowth@gmail.com</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919584288420">W</a>
+<a class="whatsapp" href="https://wa.me/919584288420">WhatsApp</a>
 
 </body>
 
