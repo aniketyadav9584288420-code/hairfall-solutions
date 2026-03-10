@@ -75,11 +75,21 @@ text-decoration:none;
 font-size:18px;
 }
 
+#success{
+display:none;
+background:#d4edda;
+padding:15px;
+margin-top:15px;
+border-radius:5px;
+}
+
 </style>
 
 <script>
 
-function sendToWhatsApp(){
+function submitForm(e){
+
+e.preventDefault();
 
 var name=document.getElementById("name").value;
 var age=document.getElementById("age").value;
@@ -87,7 +97,16 @@ var hairfall=document.getElementById("hairfall").value;
 var dandruff=document.getElementById("dandruff").value;
 var stress=document.getElementById("stress").value;
 
-var message="Hair Test Result:%0AName: "+name+"%0AAge: "+age+"%0AHairfall: "+hairfall+"%0ADandruff: "+dandruff+"%0AStress: "+stress;
+var formData=new FormData(document.getElementById("hairForm"));
+
+fetch("https://formsubmit.co/ajax/hairsolutionsgrowth@gmail.com",{
+method:"POST",
+body:formData
+});
+
+document.getElementById("success").style.display="block";
+
+var message="Hair Test Result:%0AName:"+name+"%0AAge:"+age+"%0AHairfall:"+hairfall+"%0ADandruff:"+dandruff+"%0AStress:"+stress;
 
 window.open("https://wa.me/919584288420?text="+message,"_blank");
 
@@ -110,11 +129,8 @@ window.open("https://wa.me/919584288420?text="+message,"_blank");
 <nav>
 
 <a href="#">Home</a>
-
 <a href="#hair-test">Hair Test</a>
-
 <a href="#products">Solutions</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
@@ -140,9 +156,7 @@ window.open("https://wa.me/919584288420?text="+message,"_blank");
 
 <div class="box">
 
-<form action="https://formsubmit.co/hairsolutionsgrowth@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
+<form id="hairForm" onsubmit="submitForm(event)">
 
 <input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%;padding:10px;margin:10px 0;">
 
@@ -169,9 +183,13 @@ window.open("https://wa.me/919584288420?text="+message,"_blank");
 <option>High</option>
 </select>
 
-<button type="submit" onclick="sendToWhatsApp()">Submit Hair Test</button>
+<button type="submit">Submit Hair Test</button>
 
 </form>
+
+<div id="success">
+✅ Thank you! Your Hair Test has been submitted. We will contact you on WhatsApp.
+</div>
 
 </div>
 
@@ -202,14 +220,4 @@ window.open("https://wa.me/919584288420?text="+message,"_blank");
 
 <h3>Contact Us</h3>
 
-<p>WhatsApp: 9584288420</p>
-
-<p>Email: hairsolutionsgrowth@gmail.com</p>
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/919584288420">WhatsApp</a>
-
-</body>
-
-</html>
+<p>WhatsApp: 958
