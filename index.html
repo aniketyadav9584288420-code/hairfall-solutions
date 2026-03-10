@@ -1,131 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hairfall Solution | Healthy Hair Program</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FAVICON (JPEG ICON) -->
-    <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+<title>Hairfall Solutions</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7f6;
-        }
+<style>
 
-        header {
-            background: linear-gradient(rgba(30,130,90,0.7), rgba(30,130,90,0.7)),
-                        url('header-bg.jpeg') center/cover no-repeat;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+/* HEADER */
 
-        header p {
-            margin-top: 10px;
-            font-size: 16px;
-        }
+header{
+background:linear-gradient(rgba(0,120,70,0.7),rgba(0,120,70,0.7)),url('header-bg.jpeg');
+background-size:cover;
+color:white;
+padding:40px;
+text-align:center;
+}
 
-        .container {
-            padding: 20px;
-        }
+header h1{
+margin:0;
+font-size:32px;
+}
 
-        .problems {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
+/* NAVIGATION */
 
-        .problem-box {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: 0.3s;
-        }
+nav{
+margin-top:20px;
+}
 
-        .problem-box:hover {
-            transform: translateY(-5px);
-            background: #e9f5f0;
-        }
+nav a{
+color:white;
+margin:0 15px;
+font-weight:bold;
+text-decoration:none;
+}
 
-        .problem-box h3 {
-            margin-top: 0;
-            color: #1e825a;
-        }
+nav a:hover{
+text-decoration:underline;
+}
 
-        .problem-box p {
-            display: none;
-            font-size: 14px;
-            color: #444;
-        }
+/* MAIN SECTION */
 
-        .problem-box.active p {
-            display: block;
-        }
+.container{
+padding:30px;
+}
 
-        footer {
-            background: #1e825a;
-            color: white;
-            text-align: center;
-            padding: 12px;
-            margin-top: 30px;
-        }
-    </style>
+.problems{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.box{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.box:hover{
+background:#eaf7f1;
+}
+
+.box p{
+display:none;
+margin-top:10px;
+font-size:14px;
+}
+
+.box.active p{
+display:block;
+}
+
+/* FOOTER */
+
+footer{
+background:#007846;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:white;
+text-decoration:none;
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Hairfall Solution Program</h1>
-    <p>Root cause samjho, tabhi permanent solution milega 🌿</p>
+
+<h1>Hairfall Solutions</h1>
+<p>Understand the root cause of hairfall and get the right solution</p>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Hair Test</a>
+<a href="#">Solutions</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
 <div class="container">
-    <h2>Common Hair Problems (Click to Know More)</h2>
 
-    <div class="problems">
+<h2>Common Hair Problems</h2>
 
-        <div class="problem-box" onclick="toggle(this)">
-            <h3>Heavy Hairfall</h3>
-            <p>Stress, poor diet, hormonal imbalance aur weak roots heavy hairfall ka main reason hote hain.</p>
-        </div>
+<div class="problems">
 
-        <div class="problem-box" onclick="toggle(this)">
-            <h3>Dandruff</h3>
-            <p>Dry scalp, fungal infection aur galat hair products dandruff ko badhate hain.</p>
-        </div>
+<div class="box" onclick="toggle(this)">
+<h3>Heavy Hairfall</h3>
+<p>Hairfall can happen due to stress, hormonal imbalance, poor diet and weak hair roots.</p>
+</div>
 
-        <div class="problem-box" onclick="toggle(this)">
-            <h3>Thin Hair</h3>
-            <p>Protein deficiency aur over styling se baal patle aur weak ho jate hain.</p>
-        </div>
+<div class="box" onclick="toggle(this)">
+<h3>Dandruff</h3>
+<p>Dandruff is usually caused by dry scalp, fungal infection or wrong hair products.</p>
+</div>
 
-        <div class="problem-box" onclick="toggle(this)">
-            <h3>Genetic Hairfall</h3>
-            <p>Family history ke wajah se hair follicles dheere dheere weak ho jate hain.</p>
-        </div>
+<div class="box" onclick="toggle(this)">
+<h3>Thin Hair</h3>
+<p>Thin hair can result from protein deficiency, excessive styling and poor nutrition.</p>
+</div>
 
-    </div>
+<div class="box" onclick="toggle(this)">
+<h3>Genetic Hairfall</h3>
+<p>Genetic hairfall happens due to family history and gradual weakening of hair follicles.</p>
+</div>
+
+</div>
+
 </div>
 
 <footer>
-    © 2026 Hairfall Solution | All Rights Reserved
+
+<p>© 2026 Hairfall Solutions | All Rights Reserved</p>
+
 </footer>
 
+<a href="https://wa.me/9584288420" class="whatsapp" target="_blank">💬</a>
+
 <script>
-    function toggle(box) {
-        box.classList.toggle("active");
-    }
+
+function toggle(element){
+element.classList.toggle("active");
+}
+
 </script>
 
 </body>
