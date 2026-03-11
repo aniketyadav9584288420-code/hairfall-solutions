@@ -1,13 +1,12 @@
 <!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hairfall Solutions</title><style>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hairfall Solutions</title><style>
 
 body{
 margin:0;
 font-family:Arial;
 background:#f4f4f4;
+line-height:1.6;
 }
 
 header{
@@ -35,6 +34,7 @@ padding:15px 30px;
 font-size:18px;
 border-radius:6px;
 cursor:pointer;
+margin-top:20px;
 }
 
 .container{
@@ -60,6 +60,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.1);
 .card-detail{
 display:none;
 margin-top:10px;
+color:#444;
 }
 
 .products{
@@ -72,7 +73,7 @@ justify-content:center;
 .product{
 background:white;
 padding:20px;
-width:260px;
+width:280px;
 border-radius:10px;
 text-align:center;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
@@ -90,6 +91,7 @@ border:none;
 padding:12px 20px;
 border-radius:5px;
 cursor:pointer;
+margin-top:10px;
 }
 
 .results{
@@ -135,6 +137,7 @@ color:white;
 padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
+font-weight:bold;
 }
 
 input,select,textarea{
@@ -146,6 +149,7 @@ margin:10px 0;
 </style><script>
 
 function toggle(id){
+
 var x=document.getElementById(id);
 
 if(x.style.display==="block"){
@@ -153,6 +157,7 @@ x.style.display="none";
 }else{
 x.style.display="block";
 }
+
 }
 
 </script></head><body><header><h1>Stop Hairfall Naturally</h1><p>Free Hair Analysis & Personal Hair Solution</p><p>
@@ -161,27 +166,23 @@ x.style.display="block";
 ✔ Expert Hair Guidance
 </p><a href="#hairtest">
 <button class="button">Take Free Hair Test</button>
-</a></header><div class="container"><h2 class="section-title">Common Hair Problems</h2><div class="card" onclick="toggle('c1')">
-Heavy Hairfall
+</a></header><div class="container"><h2 class="section-title">Common Hair Problems</h2><div class="card" onclick="toggle('c1')">Heavy Hairfall
+
 <div class="card-detail" id="c1">
 Hairfall can happen due to stress, poor diet or weak hair roots.
-</div>
-</div><div class="card" onclick="toggle('c2')">
-Dandruff
+</div></div><div class="card" onclick="toggle('c2')">Dandruff
+
 <div class="card-detail" id="c2">
 Dandruff happens because of dry scalp or fungal infection.
-</div>
-</div><div class="card" onclick="toggle('c3')">
-Thin Hair
+</div></div><div class="card" onclick="toggle('c3')">Thin Hair
+
 <div class="card-detail" id="c3">
 Hair thinning happens when hair roots become weak.
-</div>
-</div><div class="card" onclick="toggle('c4')">
-Genetic Hairfall
+</div></div><div class="card" onclick="toggle('c4')">Genetic Hairfall
+
 <div class="card-detail" id="c4">
 Genetic hairloss occurs due to family history.
-</div>
-</div><h2 id="hairtest" class="section-title">Free Hair Test</h2><form><input type="text" placeholder="Your Name"><input type="number" placeholder="Your Age"><select>
+</div></div><h2 id="hairtest" class="section-title">Free Hair Test</h2><form><input type="text" placeholder="Your Name"><input type="number" placeholder="Your Age"><select>
 <option>Gender</option>
 <option>Male</option>
 <option>Female</option>
@@ -201,48 +202,38 @@ Genetic hairloss occurs due to family history.
 <option>No</option>
 </select><input type="file"><textarea placeholder="Describe your hair problem"></textarea><button class="button">Submit Hair Test</button>
 
-</form><h2 class="section-title">Hair Transformation Results</h2><div class="results"><div class="result">
+<p>
+After submitting your hair test our hair expert will review your condition and contact you.
+</p></form><h2 class="section-title">Hair Transformation Results</h2><div class="results"><div class="result">
 <img src="https://images.unsplash.com/photo-1594824388853-1e8f2f16e6c1">
-<p>Hair Improvement</p>
+<p>45 Days Result</p>
 </div><div class="result">
 <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
-<p>Hair Growth Result</p>
-</div></div><h2 class="section-title">Recommended Hair Products</h2><div class="products"><div class="product"><img src="https://images.unsplash.com/photo-1590156205964-3d5c6e2a4c8e"><h3>Hair Growth Oil</h3><p>
+<p>Hair Growth Improvement</p>
+</div></div><h2 class="section-title">Recommended Products</h2><div class="products"><div class="product"><img src="https://images.unsplash.com/photo-1590156205964-3d5c6e2a4c8e"><h3>Hair Growth Oil</h3><p>
 ✔ Reduce Hairfall<br>
-✔ Strengthen Roots<br>
-✔ Promote Growth
+✔ Strong Roots<br>
+✔ Faster Growth
 </p><a href="https://wa.me/919584288420">
 <button>Order Now</button>
-</a></div><div class="product"><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707"><h3>Anti Hairfall Shampoo</h3><p>
-✔ Removes Dandruff<br>
+</a></div><div class="product"><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707"><h3>Anti Dandruff Shampoo</h3><p>
+✔ Remove Dandruff<br>
 ✔ Clean Scalp<br>
 ✔ Healthy Hair
 </p><a href="https://wa.me/919584288420">
 <button>Order Now</button>
-</a></div><div class="product"><img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc"><h3>Hair Growth Serum</h3><p>
-✔ Boost Hair Growth<br>
-✔ Repair Weak Roots<br>
-✔ Improve Hair Density
-</p><a href="https://wa.me/919584288420">
-<button>Order Now</button>
-</a></div><div class="product"><img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843"><h3>Hair Vitamins</h3><p>
-✔ Strong Roots<br>
-✔ Reduce Hair Thinning<br>
-✔ Improve Hair Health
-</p><a href="https://wa.me/919584288420">
-<button>Order Now</button>
-</a></div></div></div><div class="testimonials"><h2>Customer Reviews</h2><p>"My hairfall reduced in 30 days."</p>
-<p>"Hair growth improved a lot."</p>
-<p>"Best hair advice I received."</p></div><div class="container"><h2 class="section-title">FAQ</h2><div class="faq">
+</a></div></div></div><div class="testimonials"><h2>Customer Reviews</h2><p>"My hairfall reduced in 30 days. Thank you!"</p>
+<p>"Best hair advice I ever received."</p>
+<p>"Hair growth improved after using recommended products."</p></div><div class="container"><h2 class="section-title">FAQ</h2><div class="faq">
 <b>How long does hair treatment take?</b>
 <p>Most people see improvement in 30-60 days.</p>
 </div><div class="faq">
 <b>Is this treatment natural?</b>
-<p>Yes we recommend natural haircare products.</p>
+<p>Yes we recommend natural and safe products.</p>
 </div><div class="faq">
 <b>Can women use these products?</b>
 <p>Yes both men and women can use them.</p>
-</div></div><a class="whatsapp" href="https://wa.me/919584288420">Chat</a>
-
-<footer><h3>Contact Hair Expert</h3><p>Email: hairsolutionsgrowth@gmail.com</p><p>Phone / WhatsApp: 9584288420</p><p>Hairfall Solutions © 2026</p></footer></body>
+</div></div><a class="whatsapp" href="https://wa.me/919584288420">
+Chat
+</a><footer><h3>Contact Hair Expert</h3><p>Email: hairsolutionsgrowth@gmail.com</p><p>Phone / WhatsApp: 9584288420</p><p>Hairfall Solutions © 2026</p></footer></body>
 </html>
